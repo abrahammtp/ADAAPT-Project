@@ -1,3 +1,11 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+#add-goal {
+  position: relative; 
+  top: 10px; 
+  margin-left: 0px; 
+  margin-right: 100px; 
+  border-radius: 8px;
+}
