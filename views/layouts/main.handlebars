@@ -16,45 +16,34 @@
     <script src="js/signup.js"></script>
     <script src="js/data.js"></script>
     <title>Home Page</title>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('select').formSelect();
-        });
-    </script>
 </head>
 
 <body>
     <nav class="nav-extended">
         <div class="nav-wrapper">
             <div class="container" style="width: 100%">
-                <a href="#" class="brand-logo">Trendly</a>
+                <a href="/all" class="brand-logo">Trendly</a>
 
                 <div class="nav-content">
                     <div id="menu-nav" class="row">
                             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                                    <li><a href="">About</a></li>
-                                    <li><a href="">FAQ</a></li>
-                                    <li><a href="/">Sign Out</a></li>
-                                </ul>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/faq">FAQ</a></li>
+                                <li><a href="/">Sign Out</a></li>
+                            </ul>
                     </div>
 
                     <ul class="tabs tabs-transparent">
-                        <li class="tab"><a id="add-goal" class="btn-small">Add a goal</a></li>
-                        <li class="tab"><a id="all" class="btn-small">All Goals</a></li>
-                        <li class="tab"><a id="artists" href="">Artists</a></li>
-                        <li class="tab"><a id="places" href="">Places</a></li>
-                        <li class="tab"><a id="restaurants" href="">Restaurants</a></li>
-                        <li class="tab"><a id="movies" href="">Movies</a></li>
-                        <li class="tab"><a id="books" href="">Books</a></li>
-                        <li class="tab"><a id="activities" href="">Activities</a></li>
-                        <li class="tab"><a id="goals" href="">Other Goals</a></li>
+                        <li class="tab"><a id="add-goals" class="btn-small">Add Goals</a></li>
+                        <li class="tab"><a id="my-goals" class="btn-small">My Goals</a></li>
+                        <li class="tab"><a id="explore" class="btn-small">Explore</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
     <div id="app">
-        {{{ body }}}
+        {{ content }}
     </div>
     <div id="footer">
         <p>© 2019 ADAAPT</p>
@@ -83,7 +72,7 @@ nav {
     line-height: 0;
     text-align: center;
 }
-#add-goal {
+#add-goals {
     position: relative; 
     top: 12px;
     margin-left: 0px; 
@@ -94,7 +83,7 @@ nav {
     color: rgb(24, 24, 80);
     font-weight: 500;
 }
-#all {
+#my-goals {
     position: relative; 
     top: 12px;
     margin-left: 10px; 
@@ -105,10 +94,21 @@ nav {
     color: rgb(24, 24, 80);
     font-weight: 500;
 }
-#menu-nav {
-    position: relative;
-    left: 20%;
+#explore {
+    position: relative; 
     top: 12px;
+    margin-left: 20px; 
+    padding: 0;
+    margin-right: 50px; 
+    border-radius: 8px;
+    background-color: white;
+    color: rgb(24, 24, 80);
+    font-weight: 500;
+}
+#menu-nav {
+    float: right;
+    position: relative;
+    top: 10px;
 }
 #artists {
     margin-left: 10px;
