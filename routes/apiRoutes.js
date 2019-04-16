@@ -11,14 +11,11 @@ module.exports = function (app) {
   });
 
   app.post('/api/signup', function (req, res) {
-    console.log(req.body);
     db.User.create({
       email: req.body.email,
       password: req.body.password,
       nickname: req.body.nickname,
-      dob: req.body.dob,
-      location: req.body.location,
-      gender: req.body.gender
+      dob: req.body.dob
     }).then(function () {
       res.redirect(307, '/api/login');
     }).catch(function (err) {
@@ -34,7 +31,6 @@ module.exports = function (app) {
 
   // Create a new example
   app.post('/api/data', function (req, res) {
-    console.log(req.body);
     db.Answers.create({
       concert: req.body.concert,
       place: req.body.place,

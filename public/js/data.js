@@ -1,6 +1,5 @@
 $(document).ready(function () {
   $('select').formSelect();
-  // var submitForm = $('form.submit');
   var concertInput = $('input#artist');
   var placeInput = $('input#place');
   var restaurantInput = $('input#restaurant');
@@ -20,12 +19,10 @@ $(document).ready(function () {
       activity: activityInput.val().trim(),
       goal: goalInput.val().trim()
     };
-    console.log(userAnswers);
 
-    if (!userAnswers.concert || !userAnswers.place || !userAnswers.restaurant || !userAnswers.movie || !userAnswers.book || !userAnswers.activityInput || !userAnswers.goal) {
+    if (!userAnswers.concert || !userAnswers.place || !userAnswers.restaurant || !userAnswers.movie || !userAnswers.book || !userAnswers.activity || !userAnswers.goal) {
       return;
     }
-    console.log(userAnswers);
 
     submitAnswers(userAnswers);
     concertInput.val('');
