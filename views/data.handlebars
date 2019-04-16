@@ -5,33 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('select').formSelect();
+        });
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <title>Log In</title>
+    <script src="/public/js/index.js"></script>
+    <title>Data</title>
 </head>
 <body>
     <div class="container">
-        <h1>Log In</h1>
+        <h1>My Goals</h1>
         <h2>Trendly</h2>
+        <h3>Enter any goals you want to acheive in your lifetime below.</h6>
         <div class="input-field">
-            <input id="email" type="email" class="validate">
-            <label for="email">Email</label>
-            <span class="helper-text" data-error="Please enter a valid email address"></span>
+            <input id="artist" type="text">
+            <label for="artist">Artist I'd like to see in concert</label>
         </div>
         <div class="input-field">
-            <input id="password" type="password" class="validate">
-            <label for="password">Password</label>
+            <input id="place" type="text">
+            <label for="place">Place I'd like to visit</label>
         </div>
-        <a href="/data" class="btn-large">Log In</a>
+        <div class="input-field">
+            <input id="restaurant" type="text">
+            <label for="restaurant">Restaurant I'd like to eat at</label>
+        </div>
+        <div class="input-field">
+            <input id="movie" type="text">
+            <label for="movie">Movie I'd like to see</label>
+        </div>
+        <div class="input-field">
+            <input id="book" type="text">
+            <label for="book">Book I'd like to read</label>
+        </div>
+        <div class="input-field">
+            <input id="activity" type="text">
+            <label for="activity">Activity I'd like to do</label>
+        </div>
+        <div class="input-field">
+            <input id="goal" type="text">
+            <label for="goal">Another goal I'd like to achieve</label>
+        </div>        
+        <a href="/data" class="btn-large">Submit Goals</a>
     </div>
     <div id="footer">
         <p>© 2019 ADAAPT</p>
     </div>
 </body>
 <style>
-    body {
+    html {
         background-image: url('images/sunrise.jpg');
         background-size: cover;
     }
@@ -51,6 +76,11 @@
         font-family: 'Lobster', cursive;
         color: rgb(255, 255, 255);
         font-size: 3rem;
+    }
+    h3 {
+        color: white;
+        font-size: 1.2rem;
+        text-shadow: 0px 0px 5px rgb(0, 0, 0);
     }
     .btn-large {
         background-color: rgb(24, 24, 80);
@@ -76,6 +106,7 @@
     }
     .container {
         margin-top: 180px;
+        margin-bottom: 100px;
         background-color: rgba(0, 0, 0, 0.164);
         padding: 80px;
         border-radius: 30px;
@@ -91,6 +122,5 @@
    label {
        margin: 20px;
    }
-
 </style>
 </html>

@@ -1,8 +1,25 @@
-<div class="container">
-    <h1>Sign Up</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    {{!-- <form class="signup" action="/api/signup2" method="POST"> --}}
-    <form class="signup">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('select').formSelect();
+        });
+    </script>
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <h2>Trendly</h2>
         <div class="input-field">
             <input id="email" type="email" class="validate">
             <label for="email">Email</label>
@@ -22,59 +39,59 @@
         </div>
         <div class="input-field">
             <select id="location">
-                <option value="" disabled selected>US State</option>
-                <option value="Alabama">Alabama</option>
-                <option value="Alaska">Alaska</option>
-                <option value="Arizona">Arizona</option>
-                <option value="Arkansas">Arkansas</option>
-                <option value="California">California</option>
-                <option value="Colorado">Colorado</option>
-                <option value="Connecticut">Connecticut</option>
-                <option value="Delaware">Delaware</option>
-                <option value="Florida">Florida</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Hawaii">Hawaii</option>
-                <option value="Idaho">Idaho</option>
-                <option value="Illinois">Illinois</option>
-                <option value="Indiana">Indiana</option>
-                <option value="Iowa">Iowa</option>
-                <option value="Kansas">Kansas</option>
-                <option value="Kentucky">Kentucky</option>
-                <option value="Louisiana">Louisiana</option>
-                <option value="Maine">Maine</option>
-                <option value="Maryland">Maryland</option>
-                <option value="Louisiana">Louisiana</option>
-                <option value="Massachusetts">Massachusetts</option>
-                <option value="Michigan">Michigan</option>
-                <option value="Minnesota">Minnesota</option>
-                <option value="Mississippi">Mississippi</option>
-                <option value="Missouri">Missouri</option>
-                <option value="Montana">Montana</option>
-                <option value="Nebraska">Nebraska</option>
-                <option value="Nevada">Nevada</option>
-                <option value="New Hampshire">New Hampshire</option>
-                <option value="New Jersey">New Jersey</option>
-                <option value="New Mexico">New Mexico</option>
-                <option value="New York">New York</option>
-                <option value="North Carolina">North Carolina</option>
-                <option value="North Dakota">North Dakota</option>
-                <option value="Ohio">Ohio</option>
-                <option value="Oklahoma">Oklahoma</option>
-                <option value="Oregon">Oregon</option>
-                <option value="Pennsylvania">Pennsylvania</option>
-                <option value="Rhode Island">Rhode Island</option>
-                <option value="South Carolina">South Carolina</option>
-                <option value="South Dakota">South Dakota</option>
-                <option value="Tennessee">Tennessee</option>
-                <option value="Louisiana">Louisiana</option>
-                <option value="Texas">Texas</option>
-                <option value="Utah">Utah</option>
-                <option value="Vermont">Vermont</option>
-                <option value="Virginia">Virginia</option>
-                <option value="Washington">Washington</option>
-                <option value="West Virginia">West Virginia</option>
-                <option value="Wisconsin">Wisconsin</option>
-                <option value="Wyoming">Wyoming</option>
+                  <option value="" disabled selected>US State</option>
+                  <option value="Alabama">Alabama</option>
+                  <option value="Alaska">Alaska</option>
+                  <option value="Arizona">Arizona</option>
+                  <option value="Arkansas">Arkansas</option>
+                  <option value="California">California</option>
+                  <option value="Colorado">Colorado</option>
+                  <option value="Connecticut">Connecticut</option>
+                  <option value="Delaware">Delaware</option>
+                  <option value="Florida">Florida</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Hawaii">Hawaii</option>
+                  <option value="Idaho">Idaho</option>
+                  <option value="Illinois">Illinois</option>
+                  <option value="Indiana">Indiana</option>
+                  <option value="Iowa">Iowa</option>
+                  <option value="Kansas">Kansas</option>
+                  <option value="Kentucky">Kentucky</option>
+                  <option value="Louisiana">Louisiana</option>
+                  <option value="Maine">Maine</option>
+                  <option value="Maryland">Maryland</option>
+                  <option value="Louisiana">Louisiana</option>
+                  <option value="Massachusetts">Massachusetts</option>
+                  <option value="Michigan">Michigan</option>
+                  <option value="Minnesota">Minnesota</option>
+                  <option value="Mississippi">Mississippi</option>
+                  <option value="Missouri">Missouri</option>
+                  <option value="Montana">Montana</option>
+                  <option value="Nebraska">Nebraska</option>
+                  <option value="Nevada">Nevada</option>
+                  <option value="New Hampshire">New Hampshire</option>
+                  <option value="New Jersey">New Jersey</option>
+                  <option value="New Mexico">New Mexico</option>
+                  <option value="New York">New York</option>
+                  <option value="North Carolina">North Carolina</option>
+                  <option value="North Dakota">North Dakota</option>
+                  <option value="Ohio">Ohio</option>
+                  <option value="Oklahoma">Oklahoma</option>
+                  <option value="Oregon">Oregon</option>
+                  <option value="Pennsylvania">Pennsylvania</option>
+                  <option value="Rhode Island">Rhode Island</option>
+                  <option value="South Carolina">South Carolina</option>
+                  <option value="South Dakota">South Dakota</option>
+                  <option value="Tennessee">Tennessee</option>
+                  <option value="Louisiana">Louisiana</option>
+                  <option value="Texas">Texas</option>
+                  <option value="Utah">Utah</option>
+                  <option value="Vermont">Vermont</option>
+                  <option value="Virginia">Virginia</option>
+                  <option value="Washington">Washington</option>
+                  <option value="West Virginia">West Virginia</option>
+                  <option value="Wisconsin">Wisconsin</option>
+                  <option value="Wyoming">Wyoming</option>
             </select>
             <label>Location</label>
         </div>
@@ -82,12 +99,77 @@
             <select id="gender">
                 <option value="" disabled selected>Gender</option>
                 <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="male">Female</option>
             </select>
         </div>
-        <button type="submit" class="btn-large">Join</button>
-    </form>
-</div>
+        <a href="/data" class="btn-large">Join</a>
+    </div>
+    <div id="footer">
+        <p>© 2019 ADAAPT</p>
+    </div>
+</body>
+<style>
+    html {
+        background-image: url('images/sunrise.jpg');
+        background-size: cover;
+    }
+    h1 {
+        margin-top: 0;
+        margin-bottom: 100px;
+        font-family: 'Lobster', cursive;
+        color: rgb(255, 255, 255);
+        font-size: 6rem;
+        text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    }
+    h2 {
+        margin: 5px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        font-family: 'Lobster', cursive;
+        color: rgb(255, 255, 255);
+        font-size: 3rem;
+    }
+    .btn-large {
+        background-color: rgb(24, 24, 80);
+        border-radius: 6px;
+        margin: 20px;
+    }
+    .btn-large:focus { 
+        background-color: red;
+    }
+    .btn-large:hover { 
+        background-color: rgb(15, 33, 201);
+    }
+    #footer {
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+    background-color: rgb(24, 24, 80);
+    color: whitesmoke;
+    line-height: 0;
+    text-align: center;
+    font-size: 1rem;
+    }
+    .container {
+        margin-top: 180px;
+        margin-bottom: 100px;
+        background-color: rgba(0, 0, 0, 0.164);
+        padding: 80px;
+        border-radius: 30px;
+        width: 45%;
+    }
+  /* label color */
+   .input-field {
+       background-color: rgba(255, 255, 255, 0.836);
+       padding: 20px;
+       border-radius: 5px;
+   }
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script type="text/javascript" src="/js/signup.js"></script>
+   label {
+       margin: 20px;
+   }
+
+</style>
+</html>

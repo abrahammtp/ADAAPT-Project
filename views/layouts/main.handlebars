@@ -2,18 +2,114 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  <title>Home Page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/public/styles/styles.css">
+    <script src="js/index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <title>Home Page</title>
 </head>
 
 <body>
-  {{{body}}}
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <div class="container" style="width: 100%">
+                <a href="#" class="brand-logo">Trendly</a>
+
+                <div class="nav-content">
+                    <div id="menu-nav" class="row">
+                            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                    <li><a href="welcome.html">Sign Out</a></li>
+                                </ul>
+                    </div>
+
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a id="add-goal" class="btn-small">Add a goal</a></li>
+                        <li class="tab"><a id="all" class="btn-small">All Goals</a></li>
+                        <li class="tab"><a id="artists" href="">Artists</a></li>
+                        <li class="tab"><a id="places" href="">Places</a></li>
+                        <li class="tab"><a id="restaurants" href="">Restaurants</a></li>
+                        <li class="tab"><a id="movies" href="">Movies</a></li>
+                        <li class="tab"><a id="books" href="">Books</a></li>
+                        <li class="tab"><a id="activities" href="">Activities</a></li>
+                        <li class="tab"><a id="goals" href="">Other Goals</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="app">
+        {{ body }}
+    </div>
+    <div id="footer">
+        <p>© 2019 ADAAPT</p>
+    </div>
 </body>
 
 </html>
+
+<style>
+html {
+    background-image: url('images/sunrise2.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: auto;
+}
+nav {
+    background-color: rgb(24, 24, 80);
+}
+#footer {
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+    background-color: rgb(24, 24, 80);
+    color: whitesmoke;
+    line-height: 0;
+    text-align: center;
+}
+#add-goal {
+    position: relative; 
+    top: 12px;
+    margin-left: 0px; 
+    margin-right: 50px; 
+    border-radius: 8px;
+    padding: 0;
+    background-color: white;
+    color: rgb(24, 24, 80);
+    font-weight: 500;
+}
+#all {
+    position: relative; 
+    top: 12px;
+    margin-left: 10px; 
+    padding: 0;
+    margin-right: 50px; 
+    border-radius: 8px;
+    background-color: white;
+    color: rgb(24, 24, 80);
+    font-weight: 500;
+}
+#menu-nav {
+    position: relative;
+    left: 20%;
+    top: 12px;
+}
+#artists {
+    margin-left: 10px;
+}
+.brand-logo {
+    position: fixed;
+    top: -10px;
+    left: 20px;
+    margin: 5px;
+    font-family: 'Lobster', cursive;
+}
+</style>
