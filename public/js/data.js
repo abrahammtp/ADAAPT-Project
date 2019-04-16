@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $('select').formSelect();
-  var submitForm = $('form.submit');
+  // var submitForm = $('form.submit');
   var concertInput = $('input#artist');
   var placeInput = $('input#place');
   var restaurantInput = $('input#restaurant');
@@ -9,7 +9,7 @@ $(document).ready(function () {
   var activityInput = $('input#activity');
   var goalInput = $('input#goal');
 
-  submitForm.on('submit', function (event) {
+  $('#addingGoals').on('click', function (event) {
     event.preventDefault();
     var userAnswers = {
       concert: concertInput.val().trim(),
@@ -20,6 +20,7 @@ $(document).ready(function () {
       activity: activityInput.val().trim(),
       goal: goalInput.val().trim()
     };
+    console.log(userAnswers);
 
     if (!userAnswers.concert || !userAnswers.place || !userAnswers.restaurant || !userAnswers.movie || !userAnswers.book || !userAnswers.activityInput || !userAnswers.goal) {
       return;

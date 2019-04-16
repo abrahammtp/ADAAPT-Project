@@ -3,7 +3,11 @@ var passport = require('../config/passport');
 
 module.exports = function (app) {
   app.post('/api/login', passport.authenticate('local'), function (req, res) {
-    res.json('/data');
+    res.json('/login');
+  });
+
+  app.post('/', function (req, res) {
+    res.json('/welcome');
   });
 
   app.post('/api/signup', function (req, res) {
@@ -29,7 +33,7 @@ module.exports = function (app) {
   });
 
   // Create a new example
-  app.post('/data', function (req, res) {
+  app.post('/api/data', function (req, res) {
     console.log(req.body);
     db.Answers.create({
       concert: req.body.concert,
@@ -48,12 +52,6 @@ module.exports = function (app) {
     });
   });
 
-  // Delete an example by id
-  app.delete('/api/examples/:id', function (req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function (dbExample) {
-      res.json(dbExample);
-    });
-  });
   // Route for logging user out
   app.get('/logout', function (req, res) {
     req.logout();
