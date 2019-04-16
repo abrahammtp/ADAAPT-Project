@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/public/styles/styles.css">
     <script src="js/index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <title>Home Page</title>
 </head>
 
@@ -25,13 +26,13 @@
                             <ul id="nav-mobile" class="right hide-on-med-and-down">
                                     <li><a href="">About</a></li>
                                     <li><a href="">FAQ</a></li>
-                                    <li><a href="">Explore</a></li>
                                     <li><a href="welcome.html">Sign Out</a></li>
                                 </ul>
                     </div>
 
                     <ul class="tabs tabs-transparent">
                         <li class="tab"><a id="add-goal" class="btn-small">Add a goal</a></li>
+                        <li class="tab"><a id="all" class="btn-small">All Goals</a></li>
                         <li class="tab"><a id="artists" href="">Artists</a></li>
                         <li class="tab"><a id="places" href="">Places</a></li>
                         <li class="tab"><a id="restaurants" href="">Restaurants</a></li>
@@ -55,6 +56,12 @@
 </html>
 
 <style>
+html {
+    background-image: url('images/sunrise2.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: auto;
+}
 nav {
     background-color: rgb(24, 24, 80);
 }
@@ -72,7 +79,19 @@ nav {
     position: relative; 
     top: 12px;
     margin-left: 0px; 
-    margin-right: 100px; 
+    margin-right: 50px; 
+    border-radius: 8px;
+    padding: 0;
+    background-color: white;
+    color: rgb(24, 24, 80);
+    font-weight: 500;
+}
+#all {
+    position: relative; 
+    top: 12px;
+    margin-left: 10px; 
+    padding: 0;
+    margin-right: 50px; 
     border-radius: 8px;
     background-color: white;
     color: rgb(24, 24, 80);
@@ -80,10 +99,17 @@ nav {
 }
 #menu-nav {
     position: relative;
+    left: 20%;
     top: 12px;
 }
+#artists {
+    margin-left: 10px;
+}
 .brand-logo {
-    position: relative;
+    position: fixed;
     top: -10px;
+    left: 20px;
+    margin: 5px;
+    font-family: 'Lobster', cursive;
 }
 </style>
