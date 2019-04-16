@@ -46,7 +46,7 @@ $(document).ready(function () {
       location: userData.location,
       gender: userData.gender
     }).then(function (data) {
-      window.location.replace(data);
+      window.location.replace('/');
       // If there's an error, handle it by throwing up a boostrap alert
     }).catch(handleLoginErr);
   }
